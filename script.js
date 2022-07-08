@@ -1,5 +1,5 @@
 //aplicando json
-//los colores se aplican en sentido horario, empezando por las villas de arriba y terminando en el centro
+//los colores se aplican en sentido horario, empezando por las villas de la derecha y terminando en el centro
 // esta funcion carga los colores del json
 //se debe usar primero la funcion cargar, para hacer el array de colores que se usara luego en el boton archivo json
 var colores=[]
@@ -13,13 +13,9 @@ async function nueva(){
       if(jsonData1.urbanizaciones[urbanizacion].estado=='green')
         jsonData1.urbanizaciones[urbanizacion].estado='rgb(51, 255, 0)'
         colores.push(jsonData1.urbanizaciones[urbanizacion].estado)}
-    var container = document.getElementsByClassName('arriba')
-    for(var y=0;y<container.length;y++) {
-        container[y].style.background = colores[y];     
-    }colores.splice(0,6)
     var container = document.getElementsByClassName('derecha')
     for(var y=0;y<container.length;y++) {
-        container[y].style.background = colores[y];
+        container[y].style.background = colores[y];     
     }colores.splice(0,4)
     var container = document.getElementsByClassName('abajo')
     for(var y=0;y<container.length;y++) {
@@ -29,6 +25,10 @@ async function nueva(){
     for(var y=0;y<container.length;y++) {
         container[y].style.background = colores[y];
     }colores.splice(0,4)
+    var container = document.getElementsByClassName('arriba')
+    for(var y=0;y<container.length;y++) {
+        container[y].style.background = colores[y];
+    }colores.splice(0,6)
     var container = document.getElementsByClassName('centro')
     for(var y=0;y<container.length;y++) {
         container[y].style.background = colores[y];
