@@ -8,7 +8,7 @@
     grid-template-rows: auto 1fr;
     grid-template-areas: "header" "body";
     height: auto;
-    width: 56vh;
+    width: 70vh;
 }
 
 .header{

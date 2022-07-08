@@ -167,9 +167,9 @@ function usuario(cedula, name, apellido, rol, estado){
 
 //Ventana de pago de alicuota
 var persona = [
-  {anio: '2022', mes: '1', fecha_pag: '2-2-2', valor:'10', estado:'Pendiente',evidencia:'☁'},
-  {anio: '2022', mes: '2', fecha_pag: '2-2-2', valor:'11', estado:'Pagado',evidencia:'☁'},
-  {anio: '2022', mes: '3', fecha_pag: '2-2-2', valor:'10',estado:'Pagado',evidencia:'☁'},
+  {anio: '2022', mes: '1', fecha_pag: '2-2-2', valor:'10', estado:'Pendiente',verificar:'✔',evidencia:'☁'},
+  {anio: '2022', mes: '2', fecha_pag: '2-2-2', valor:'11', estado:'Pagado',verificar:'✔',evidencia:'☁'},
+  {anio: '2022', mes: '3', fecha_pag: '2-2-2', valor:'10',estado:'Pagado',verificar:'✔',evidencia:'☁'},
 ]
 function agregar(){
   var listaPersona = document.getElementById('tabla');
@@ -182,6 +182,7 @@ function agregar(){
         <td>${item.fecha_pag}</td>
         <td>${item.valor}</td>
         <td>${item.estado}</td>
+        <td><button onclick='verificar(this)'>${item.verificar}</button></td>
         <td><button onclick='estado(this)'>${item.evidencia}</button></td>
       </td>
     `
