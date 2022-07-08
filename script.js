@@ -145,3 +145,46 @@ function normal() {
     }
 }
 
+//funcion para crear objeto de persona
+function Person(vivienda, cedula, name, cedula_r, nombre_r, tel, correo, fecha_ini) {
+  this.vivienda = vivienda;
+  this.cedula = cedula;
+  this.name = name;
+  this.cedula_r = cedula_r;
+  this.nombre_r = nombre_r;
+  this.tel = tel;
+  this.correo = correo;
+  this.fecha_ini = fecha_ini;
+}
+
+function usuario(cedula, name, apellido, rol, estado){
+  this.cedula = cedula;
+  this.name = name;
+  this.apellido = apellido;
+  this.rol = rol;
+  this.estado = estado;
+}
+
+//Ventana de pago de alicuota
+var persona = [
+  {anio: '2022', mes: '1', fecha_pag: '2-2-2', valor:'10', estado:'Pendiente',evidencia:'☁'},
+  {anio: '2022', mes: '2', fecha_pag: '2-2-2', valor:'11', estado:'Pagado',evidencia:'☁'},
+  {anio: '2022', mes: '3', fecha_pag: '2-2-2', valor:'10',estado:'Pagado',evidencia:'☁'},
+]
+function agregar(){
+  var listaPersona = document.getElementById('tabla');
+  let tablaContent = ``
+  for (const item of persona) {
+     tablaContent += `
+      <tr>
+        <td>${item.anio}</td>
+        <td>${item.mes}</td>
+        <td>${item.fecha_pag}</td>
+        <td>${item.valor}</td>
+        <td>${item.estado}</td>
+        <td><button onclick='estado(this)'>${item.evidencia}</button></td>
+      </td>
+    `
+  }
+  listaPersona.innerHTML += tablaContent
+  }
